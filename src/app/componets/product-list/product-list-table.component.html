@@ -1,0 +1,22 @@
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th></th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Units in stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productList" scope="row">
+      <td class="align-middle"><img src="{{product.imageUrl}}" height="50"/></td>
+      <td class="align-middle">{{product.name}}</td>
+      <td class="align-middle">{{ product.unitPrice | currency:'USD'}}</td>
+      <td class="align-middle">{{ product.unitsInStock}}</td>
+    </tr>
+  </tbody>
+</table>
+
